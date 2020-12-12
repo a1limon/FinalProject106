@@ -1,0 +1,150 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+h3 {
+    text-align:center;
+}
+a {
+    color: red;
+} 
+
+
+#vitalScorecards {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+}
+
+/* #summaryCharts {
+    display: flex;
+    height: 500px;
+}
+
+#summaryCharts section {
+    border: 1px solid black;
+    background: green;
+    flex: 1 1 auto;
+    flex-basis: 50%;
+} */
+
+.chart-parent--container {
+    display: flex;
+}
+
+.chart--container {
+    height: 100%;
+    width: 100%;
+    min-height: 400px;
+}
+
+#vitalScorecards h3 {
+    color: black;
+}
+
+#vitalScorecards output {
+    font-size: xx-large;
+    color: blue;
+}
+
+#totalSales:before {
+    content: '$';
+    font-size: xx-large;
+    color: green;
+}
+
+#barChart{
+    height: auto;
+    width: auto;
+}
+/* #barChart2020{
+    height: auto;
+    width: auto;
+    right: 1000px;
+} */
+.flex-container2 {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-self: center;
+   
+}
+
+/* .flex-container2>div>img {
+    width: auto;
+} */
+.flex-container2>div{
+    width:50%;
+}
+
+#bracket2020 {
+    width: 100%;
+}
+#barChart2020{
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.flex-container3 {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-self: center;
+   
+}
+
+/* .flex-container2>div>img {
+    width: auto;
+} */
+.flex-container3>div{
+    width:50%;
+}
+
+#bracket2019 {
+    width: 100%;
+}
+#barChart2019{
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+
+/* .flex-container2 > div {
+    font-size: large;
+    align-content: space-around;
+    align-items: flex-start;
+    justify-content: flex-start;   
+} */
+
+
+  /* .flex-container3{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    justify-content: flex-start;
+    width: auto
+  }
+
+  .flex-container3 >img{
+    width: auto;
+    height: auto;
+  } */
+
+
+
+.btnCon {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+
+.buttons button.active {
+background-color: #0051B4;
+color: white;
+}

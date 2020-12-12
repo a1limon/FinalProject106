@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>DSC106 - Project</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Paytone+One&display=swap" rel="stylesheet" />
+	<link href="./styles/dashboard.css" rel="stylesheet" />
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	
+	<script src="https://code.highcharts.com/modules/data.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script type = "module" src="https://cdnjs.cloudflare.com/ajax/libs/regression/2.0.1/regression.js" integrity="sha512-PHHRPMxJK1xGYLQPv9FoDbCF2X23Ao1lMAD52oLY9TBW033s4zwIXl5JQBGlfI2iOx3W1qP3LAS/MMv5Ttj0aQ==" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <h1>Money doesn't buy championships... or does it?</h1>
+	<h3>A look into the 2020 World Series runs of the Los Angeles Dodgers and the Tampa Bay Rays.</h3>
+	<h3>A battle not just between coasts, but between payrolls.</h3>
+
+	<hr/>
+	<section id ="barSec">
+		<div class = "btnCon">
+			<div>Select season</div>
+			<div class='buttons'>
+				<button id='2019'>
+					2019
+				</button>
+				<button id='2020' class = 'active'>
+					2020
+				</button>
+			</div>
+	</div>
+
+		<div id="barChart"></div>
+	</section>
+
+	<hr/>
+
+<!-- 2020 flex container-->
+<div class = "flex-container2">
+		<div>
+			<ul>2020 Postseason bracket</ul>
+			<figure><img id = "bracket2020" src = "./images/2020bracket.jpeg"></figure>
+			<ul><figcaption><a style= 'font-size:10px' href = "https://img.mlbstatic.com/mlb-images/image/private/w_1200,q_85,f_jpg/mlb/l5nasohsm9ahbmrcqvf8">Source</a></figcaption></ul>
+		</div>
+		<div id="barChart2020"></div>
+ </div>
+ 
+<!-- 2019 flex con -->
+<div class = "flex-container3">
+	<div>
+		<ul>2019 Postseason bracket</ul>
+		<figure><img id = "bracket2019" src = "./images/2019bracket.jpeg"></figure>
+		<ul><figcaption><a style= 'font-size:10px' href = "https://img.mlbstatic.com/mlb-images/image/private/t_16x9/t_w1024/mlb/rislmeajifrtzi9ariii">Source</a></figcaption></ul>
+	</div>
+	<div id="barChart2019"></div>
+</div>
+<hr/>
+
+<!-- flex container win percentage vs payroll scatter plot-->
+<div class = "flex-container4">
+	<div id="scatter1"></div>
+</div>
+
+<!--  -->
+<!-- <div class = "flex-container3">
+<div>
+	<ul>2019 Postseason bracket</ul>
+	<figure><img id = "bracket2019" src = "./images/2019bracket.jpeg"></figure>
+	<ul><figcaption><a style= 'font-size:10px' href = "https://twitter.com/MLB/status/1318205385589854210/photo/1">Source</a></figcaption></ul>
+</div>
+<div id="barChart2019"></div>
+</div> -->
+<script src="projectHC.js"></script>
+
+</body>
+
+</html>

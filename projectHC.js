@@ -638,25 +638,22 @@ let scatterData19 = [
     {data:[[75596271,.352]],name:"Miami Marlins",color:"#00A3E0"},
     {data:[[64178722,.593]],name:"Tampa Bay Rays",color:"#8FBCE6"},
     {data:[[72731474,.426]],name:"Pittsburgh Pirates",color:"#FDB827"},
-    {data:[[73316689,.333]],name:"Baltimore Orioles",color:"#DF4601"}]
+    {data:[[73316689,.333]],name:"Baltimore Orioles",color:"#DF4601"}
+]
 
 let dat19 = [];
 for (let d = 0; d < scatterData19.length; d++){
     dat19.push(scatterData19[d].data[0]);
 }
+console.log(dat19);
+scatterData19.push(fitData(dat19));
+console.log(scatterData19);
 
-var ymxb = regression('linear', dat19);
-var m = ymxb.equation[0], b = ymxb.equation[1];
-var xs = [];
-dat19.forEach(function(d){
-    xs.push(d[0])
-});
-var x0 = Math.min.apply(null, xs), 
-    y0 = m*x0 + b;
-var xf = Math.max.apply(null, xs), 
-    yf = m*xf + b;
+console.log(scatterData19.slice(0,30));
 
-Highcharts.chart('scatter1', {
+console.log(scatterData19.slice(30,31));
+
+let scatter1  = Highcharts.chart('scatter1', {
     chart: {
         type: 'scatter',
         zoomType: 'xy'
@@ -718,7 +715,7 @@ Highcharts.chart('scatter1', {
             }
         }
     },
-    series: [{type: 'line',data: [[x0,y0], [xf,yf]]}]
+    series: scatterData19
 });
 
 // let scatterData20 = [

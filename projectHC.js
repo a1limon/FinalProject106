@@ -656,8 +656,8 @@ console.log(scatterData19.slice(0,30));
 
 let scatter1  = Highcharts.chart('scatter1', {
     chart: {
-        type: 'scatter',
-        zoomType: 'xy'
+        type: 'scatter'
+        
     },
     title: {
         text: 'Win Percentage vs Payroll (2019)'
@@ -724,13 +724,13 @@ let scatter1  = Highcharts.chart('scatter1', {
  */
 let scatterData20 = [
     {data:[[111939081,.550]],name:"New York Yankees",color:"#0C2340"},
-    {data:[[108417397,.717]],name:"Los Angeles Dodgers",color:"#005A9C"},
+    {data:[[108417397,.717]],name:"Los Angeles Dodgers",color:"#005A9C", marker:{symbol: 'diamond'}},
     {data:[[86596171,.567]],name:"Chicago Cubs",color: "#0E3386"},
     {data:[[84210390,.400]],name:"Boston Red Sox",color:"#BD3039"},
     {data:[[82536161,.483]],name:"Houston Astros",color:"#EB6E1F"},
     {data:[[81945598,.433]],name:"New York Mets",color:"#002D72"},
     {data:[[80893547,.467]],name:"Philadelphia Phillies",color:"#E81828"},
-    {data:[[75067703,.433]],name:"Washington Nationals",color:"#AB0003", marker:{symbol: 'diamond'}},
+    {data:[[75067703,.433]],name:"Washington Nationals",color:"#AB0003"},
     {data:[[73408817,.483]],name:"San Francisco Giants",color:"#FD5A1E"},
     {data:[[73246343,.517]],name:"St. Louis Cardinals",color:"#C41E3A"},
     {data:[[73097954,.617]],name:"San Diego Padres",color:"#2F241D"}, 
@@ -763,8 +763,7 @@ scatterData20.push(fitData(dat20));
 
 let scatter2  = Highcharts.chart('scatter2', {
     chart: {
-        type: 'scatter',
-        zoomType: 'xy'
+        type: 'scatter'
     },
     title: {
         text: 'Win Percentage vs Payroll (2020)'

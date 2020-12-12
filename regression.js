@@ -112,6 +112,10 @@ function fitData(data, typ) {
     }
 
     return {
+      //@a1limon's modifications
+      type: 'line',
+      marker: {enabled: false},
+      // end of modifications
       data: ypred,
       slope: ret[0],
       intercept: ret[1],

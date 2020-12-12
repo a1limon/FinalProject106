@@ -652,6 +652,7 @@ console.log(scatterData19);
 console.log(scatterData19.slice(0,30));
 
 console.log(scatterData19.slice(30,31));
+console.log(scatterData19.slice(0,30));
 
 let scatter1  = Highcharts.chart('scatter1', {
     chart: {
@@ -662,7 +663,7 @@ let scatter1  = Highcharts.chart('scatter1', {
         text: 'Win Percentage vs Payroll (2019)'
     },
     subtitle: {
-        text: "Source: <a href='https://www.spotrac.com/mlb/payroll/2020/'>spotrac.com</a>"
+        text: "Source: <a href='https://www.spotrac.com/mlb/payroll/2019/'>spotrac.com</a>"
     },
     xAxis: {
         title: {
@@ -718,41 +719,112 @@ let scatter1  = Highcharts.chart('scatter1', {
     series: scatterData19
 });
 
-// let scatterData20 = [
-//     {data: [[223019037,.636]],name:"New York Yankees",color:"#0C2340"},
-//     {data:[[207000814,.654]],name:"Los Angeles Dodgers",color:"#005A9C"},
-//     {data:[[221590085,.519]],name:"Chicago Cubs",color: "#0E3386"},
-//     {data:[[229196106,.519]],name:"Boston Red Sox",color:"#BD3039"},
-//     {data:[[168804925,.660]],name:"Houston Astros",color:"#EB6E1F"},
-//     {data:[[146835812,.531]],name:"New York Mets",color:"#002D72"},
-//     {data:[[159637244,.500]],name:"Philadelphia Phillies",color:"#E81828"},
-//     {data:[[172307808,.574]],name:"Washington Nationals",color:"#AB0003"},
-//     {data:[[178582126,.475]],name:"San Francisco Giants",color:"#FD5A1E"},
-//     {data:[[174317164,.562]],name:"St. Louis Cardinals",color:"#C41E3A"},
-//     {data:[[104254790,.432]],name:"San Diego Padres",color:"#2F241D"}, 
-//     {data:[[157162629,.438]],name:"Colorado Rockies",color:"#33006F"},
-//     {data:[[161270385,.444]],name:"Los Angeles Angels",color:"#862633"},
-//     {data:[[118927905,.525]],name:"Arizona Diamondbacks",color:"#A71930"},
-//     {data:[[148538766,.481]],name:"Texas Rangers",color:"#003278"},
-//     {data:[[143947963,.599]],name:"Atlanta Braves",color:"#13274F"},
-//     {data:[[125256003,.623]],name:"Minnesota Twins",color:"#002B5C"},
-//     {data:[[128391569,.463]],name:"Cincinnati Reds",color:"#C6011F"},
-//     {data:[[111371067,.414]],name:"Toronto Blue Jays",color:"#134A8E"},
-//     {data:[[91371201,.447]],name:"Chicago White Sox",color:"#27251F"},
-//     {data:[[144391293,.420]],name:"Seattle Mariners",color:"#005C5C"},
-//     {data:[[114631137,.292]],name:"Detroit Tigers",color:"#0C2340"},
-//     {data:[[135889019,.549]],name:"Milwaukee Brewers",color:"#FFC52F"},
-//     {data:[[107693747,.574]],name:"Cleveland Indians",color:"#0C2340"},
-//     {data:[[93394531,.599]],name:"Oakland Athletics",color:"#003831"},
-//     {data:[[104773003,.364]],name:"Kansas City Royals",color:"#004687"},
-//     {data:[[75596271,.352]],name:"Miami Marlins",color:"#00A3E0"},
-//     {data:[[64178722,.593]],name:"Tampa Bay Rays",color:"#8FBCE6"},
-//     {data:[[72731474,.426]],name:"Pittsburgh Pirates",color:"#FDB827"},
-//     {data:[[73316689,.333]],name:"Baltimore Orioles",color:"#DF4601"}  
-// ];
+/**
+ * Scatterplot wins vs payroll 2020
+ */
+let scatterData20 = [
+    {data:[[111939081,.550]],name:"New York Yankees",color:"#0C2340"},
+    {data:[[108417397,.717]],name:"Los Angeles Dodgers",color:"#005A9C"},
+    {data:[[86596171,.567]],name:"Chicago Cubs",color: "#0E3386"},
+    {data:[[84210390,.400]],name:"Boston Red Sox",color:"#BD3039"},
+    {data:[[82536161,.483]],name:"Houston Astros",color:"#EB6E1F"},
+    {data:[[81945598,.433]],name:"New York Mets",color:"#002D72"},
+    {data:[[80893547,.467]],name:"Philadelphia Phillies",color:"#E81828"},
+    {data:[[75067703,.433]],name:"Washington Nationals",color:"#AB0003", marker:{symbol: 'diamond'}},
+    {data:[[73408817,.483]],name:"San Francisco Giants",color:"#FD5A1E"},
+    {data:[[73246343,.517]],name:"St. Louis Cardinals",color:"#C41E3A"},
+    {data:[[73097954,.617]],name:"San Diego Padres",color:"#2F241D"}, 
+    {data:[[67808533,.433]],name:"Colorado Rockies",color:"#33006F"},
+    {data:[[66040893,.433]],name:"Los Angeles Angels",color:"#862633"},
+    {data:[[65598752,.417]],name:"Arizona Diamondbacks",color:"#A71930"},
+    {data:[[64214137,.367]],name:"Texas Rangers",color:"#003278"},
+    {data:[[63561931,.583]],name:"Atlanta Braves",color:"#13274F"},
+    {data:[[55679689,.600]],name:"Minnesota Twins",color:"#002B5C"},
+    {data:[[55638685,.517]],name:"Cincinnati Reds",color:"#C6011F"},
+    {data:[[54997060,.533]],name:"Toronto Blue Jays",color:"#134A8E"},
+    {data:[[53665251,.583]],name:"Chicago White Sox",color:"#27251F"},
+    {data:[[50433829,.450]],name:"Seattle Mariners",color:"#005C5C"},
+    {data:[[43164880,.397]],name:"Detroit Tigers",color:"#0C2340"},
+    {data:[[41434086,.483]],name:"Milwaukee Brewers",color:"#FFC52F"},
+    {data:[[39299107,.583]],name:"Cleveland Indians",color:"#0C2340"},
+    {data:[[36720178,.600]],name:"Oakland Athletics",color:"#003831"},
+    {data:[[34812194,.433]],name:"Kansas City Royals",color:"#004687"},
+    {data:[[31555593,.517]],name:"Miami Marlins",color:"#00A3E0"},
+    {data:[[28290689,.667]],name:"Tampa Bay Rays",color:"#8FBCE6"},
+    {data:[[25337837,.317]],name:"Pittsburgh Pirates",color:"#FDB827"},
+    {data:[[23478635,.417]],name:"Baltimore Orioles",color:"#DF4601"}
+]
 
+let dat20 = [];
+for (let d = 0; d < scatterData20.length; d++){
+    dat20.push(scatterData20[d].data[0]);
+}
+scatterData20.push(fitData(dat20));
 
-
+let scatter2  = Highcharts.chart('scatter2', {
+    chart: {
+        type: 'scatter',
+        zoomType: 'xy'
+    },
+    title: {
+        text: 'Win Percentage vs Payroll (2020)'
+    },
+    subtitle: {
+        text: "Source: <a href='https://www.spotrac.com/mlb/payroll/2020/'>spotrac.com</a>"
+    },
+    xAxis: {
+        title: {
+            enabled: true,
+            text: 'Payroll ($ millions)'
+        },
+        startOnTick: true,
+        endOnTick: true,
+        showLastLabel: true
+    },
+    yAxis: {
+        title: {
+            text: 'Win %'
+        },
+    },
+    legend: {
+        enabled: false
+    //     layout: 'vertical',
+    //     align: 'left',
+    //     verticalAlign: 'top',
+    //     x: 100,
+    //     y: 70,
+    //     floating: true,
+    //     backgroundColor: Highcharts.defaultOptions.chart.backgroundColor,
+    //     borderWidth: 1
+    },
+    plotOptions: {
+        scatter: {
+            lineWidth:5,
+            marker: {
+                symbol: 'circle',
+                radius: 5,
+                states: {
+                    hover: {
+                        enabled: true,
+                        lineColor: 'rgb(100,100,100)'
+                    }
+                }
+            },
+            states: {
+                hover: {
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            tooltip: {
+                headerFormat: '<b>{series.name}</b><br>',
+                pointFormat: '${point.x:,.0f} , {point.y}%'
+            }
+        }
+    },
+    series: scatterData20
+});
 
 
             

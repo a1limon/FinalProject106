@@ -12,8 +12,6 @@ const select = id => document.getElementById(id);
 // import {regression} from 'regression';
 
 
-
-
 var data = {
     2019: [
     ["Boston Red Sox", 229196106],
@@ -203,13 +201,14 @@ Highcharts.setOptions({
 var chart = Highcharts.chart('barChart', {
     chart: {
         type: 'bar',
-        height: 630,
+        height: 670,
+        backgroundColor: '#343435'
 
     },
     caption: {
         text: "<b>*These figures derive from a player's payroll salary, which includes the combination of a base salary, incentives, & any signing bonus proration.</b>\
         <br>A normal season consists of 162 games, however, in a year unlike any other, 2020 saw a baseball season unlike any other.\
-		Due to COVID, the 2020 season was shortened to only 60 games. The button above the chart title allows for comparison of payrolls between the most recent normal season (2019) and the 2020 season."
+		Due to COVID, the <br>2020 season was shortened to only 60 games. The button above the chart title allows for comparison of payrolls between the most recent <br> normal season (2019) and the 2020 season."
 
     },
     title: {
@@ -474,7 +473,8 @@ var chart2 = Highcharts.chart('barChart2020', {
     chart: {
         type: 'bar',
         height: 420,
-        width: 500
+        width: 500,
+        backgroundColor:'#343435'
 
     },
     // caption: {
@@ -553,7 +553,8 @@ var chart3 = Highcharts.chart('barChart2019', {
     chart: {
         type: 'bar',
         height: 420,
-        width: 500
+        width: 500,
+        backgroundColor:'#343435'
 
     },
     title: {
@@ -672,7 +673,8 @@ console.log(scatterData19.slice(0,30));
 
 let scatter1  = Highcharts.chart('scatter1', {
     chart: {
-        type: 'scatter'
+        type: 'scatter',
+        backgroundColor:'#343435'
         
     },
     title: {
@@ -784,7 +786,8 @@ scatterData20.push(fitData(dat20));
 
 let scatter2  = Highcharts.chart('scatter2', {
     chart: {
-        type: 'scatter'
+        type: 'scatter',
+        backgroundColor:'#343435'
     },
     title: {
         text: 'Win Percentage vs Payroll (2020)'
@@ -852,7 +855,8 @@ let scatter2  = Highcharts.chart('scatter2', {
 Highcharts.chart('line1', {
     chart: {
         height: 700,
-        width: 700
+        width: 700,
+        backgroundColor:'#343435'
     },
     title: {
         text: 'Regular Season Win % by Season'
@@ -925,7 +929,8 @@ Highcharts.chart('line1', {
 Highcharts.chart('line2', {
     chart: {
         height: 700,
-        width: 700
+        width: 700,
+        backgroundColor:'#343435'
     },
     title: {
         text: 'Payroll by season'

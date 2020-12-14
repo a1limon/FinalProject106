@@ -1,12 +1,22 @@
+/* :root {
+    color-scheme: #2a2a2b;
+} */
+body {
+    background-color:#343435;
+}
 * {
     font-family: 'Montserrat', sans-serif;
 }
 h1{
     text-align: center;
     font-size: 50px;
+    color: whitesmoke;
 }
 h3 {
     text-align:center;
+    font-size: 22px;
+    color: whitesmoke;
+
 }
 a {
     color: gray;
@@ -14,9 +24,14 @@ a {
 p {
     margin-left: 50px;
     margin-right: 50px;
+    color: whitesmoke;
+
 }
 b{
     font-weight: bolder;
+}
+ul {
+    color: whitesmoke;
 }
 
 
@@ -27,17 +42,6 @@ b{
     text-align: center;
 }
 
-/* #summaryCharts {
-    display: flex;
-    height: 500px;
-}
-
-#summaryCharts section {
-    border: 1px solid black;
-    background: green;
-    flex: 1 1 auto;
-    flex-basis: 50%;
-} */
 
 .chart-parent--container {
     display: flex;
@@ -49,20 +53,6 @@ b{
     min-height: 400px;
 }
 
-#vitalScorecards h3 {
-    color: black;
-}
-
-#vitalScorecards output {
-    font-size: xx-large;
-    color: blue;
-}
-
-#totalSales:before {
-    content: '$';
-    font-size: xx-large;
-    color: green;
-}
 
 #barChart{
     height: auto;
@@ -104,9 +94,6 @@ b{
    
 }
 
-/* .flex-container2>div>img {
-    width: auto;
-} */
 .flex-container3>div{
     width:50%;
 }
@@ -138,34 +125,14 @@ b{
    
 }
 
-/* .flex-container2 > div {
-    font-size: large;
-    align-content: space-around;
-    align-items: flex-start;
-    justify-content: flex-start;   
-} */
-
-
-  /* .flex-container3{
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: space-between;
-    justify-content: flex-start;
-    width: auto
-  }
-
-  .flex-container3 >img{
-    width: auto;
-    height: auto;
-  } */
-
-
-
 .btnCon {
     display: inline-block;
     text-align: center;
     width: 100%;
     justify-content: center;
+    color: whitesmoke;
+    font-size: 14px;
+
 }
 
 

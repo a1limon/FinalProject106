@@ -35,12 +35,12 @@ ul {
 }
 
 
-#vitalScorecards {
+/* #vitalScorecards {
     display: grid;
     grid-column-gap: 50px;
     grid-template-columns: auto auto auto;
     text-align: center;
-}
+} */
 
 
 .chart-parent--container {
@@ -120,7 +120,7 @@ ul {
 .flex-container5 {
     display: flex;
     flex-wrap: nowrap;
-    align-content: center;gi
+    align-content: center;
     align-self: center;
    
 }

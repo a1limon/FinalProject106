@@ -846,27 +846,35 @@ let scatter2  = Highcharts.chart('scatter2', {
     series: scatterData20
 });
 
-
+/**
+ * Line chart reg season win % by season
+ */
 Highcharts.chart('line1', {
-
+    chart: {
+        height: 700,
+        width: 700
+    },
     title: {
-        text: 'Solar Employment Growth by Sector, 2010-2016'
+        text: 'Regular Season Win % by Season'
     },
 
     subtitle: {
-        text: 'Source: thesolarfoundation.com'
+        text: "Source: <a href='https://www.baseball-reference.com'>baseball-reference.com</a>"
     },
 
     yAxis: {
+        min: 0.0,
+        max: 0.8,
         title: {
-            text: 'Number of Employees'
+            text: 'Win %'
         }
     },
 
     xAxis: {
-        accessibility: {
-            rangeDescription: 'Range: 2010 to 2017'
-        }
+        allowDecimals: false,
+       title: {
+           text: 'Year of Season'
+       }
     },
 
     legend: {
@@ -880,16 +888,100 @@ Highcharts.chart('line1', {
             label: {
                 connectorAllowed: false
             },
-            pointStart: 2015
+            pointStart: 2016
         }
     },
 
     series: [{
         name: 'Dodgers',
-        data: [43934, 52503, 57177, 69658, 97031, 119931]
+        data: [.562, .642, .564, .654, .717],
+        color: "#005A9C"
     }, {
         name: 'Rays',
-        data: [24916, 24064, 29742, 29851, 32490, 30282]
+        data: [.420, .494, .556, .593, .667],
+        color: "#8FBCE6"
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+
+/**
+ * Line chart payroll by season
+ */
+Highcharts.chart('line2', {
+    chart: {
+        height: 700,
+        width: 700
+    },
+    title: {
+        text: 'Payroll by season'
+    },
+
+    subtitle: {
+        text: "Source: <a href='https://www.spotrac.com/mlb/payroll'>spotrac.com</a>"
+    },
+
+    yAxis: {
+        min: 0,
+        max: 260000000,
+        title: {
+            text: 'Payroll ($ millions)'
+        }
+    },
+
+    xAxis: {
+        allowDecimals: false,
+       title: {
+           text: 'Year of Season'
+       }
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2016
+        // },
+        // line: {
+        // tooltip: {
+        //     // headerFormat: '<b>{series.name}</b><br>',
+        //     pointFormat: '{series.name}: $ {point.y:,.0f}'
+        // }
+    }
+    },
+    tooltip: {
+        valuePrefix: "$",
+    },
+
+    series: [{
+        name: 'Dodgers',
+        data: [267302820, 259119625, 199582045, 207000814, 108417397],
+        color: "#005A9C"
+    }, {
+        name: 'Rays',
+        data: [70832249, 77811205, 68810167, 64178722, 28290689],
+        color: "#8FBCE6"
     }],
 
     responsive: {

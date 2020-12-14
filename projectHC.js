@@ -206,6 +206,12 @@ var chart = Highcharts.chart('barChart', {
         height: 630,
 
     },
+    caption: {
+        text: "<b>*These figures derive from a player's payroll salary, which includes the combination of a base salary, incentives, & any signing bonus proration.</b>\
+        <br>A normal season consists of 162 games, however, in a year unlike any other, 2020 saw a baseball season unlike any other.\
+		Due to COVID, the 2020 season was shortened to only 60 games. The button above the chart title allows for comparison of payrolls between the most recent normal season (2019) and the 2020 season."
+
+    },
     title: {
         text: 'MLB Total Payroll by Team 2020'
     },
@@ -330,6 +336,12 @@ years.forEach(function (year) {
         chart.update({
             title: {
                 text: 'MLB Total Payroll by Team ' + year
+            },
+            caption: {
+                text: "<b>*These figures derive from a player's payroll salary, which includes the combination of a base salary, incentives, & any signing bonus proration.</b>\
+                <br>A normal season consists of 162 games, however, in a year unlike any other, 2020 saw a baseball season unlike any other.\
+                Due to COVID, the 2020 season was shortened to only 60 games. The button above the chart title allows for comparison of payrolls between the most recent normal season (2019) and the 2020 season."
+        
             },
             subtitle: {
                 text: "Source: <a href='https://www.spotrac.com/mlb/payroll/2020/'>spotrac.com</a>\u00A0\u00A0\u00A0\u00A0 MLB Team Color Codes: <a href='https://teamcolorcodes.com/mlb-color-codes/'>teamcolorcodes.com</a>"
@@ -465,6 +477,10 @@ var chart2 = Highcharts.chart('barChart2020', {
         width: 500
 
     },
+    // caption: {
+    //     text: "This chart filters out teams who made the 2020 playoffs vs those who didn't."
+
+    // },
     title: {
         text: 'Total payroll by playoff teams 2020'
     },
@@ -678,6 +694,7 @@ let scatter1  = Highcharts.chart('scatter1', {
         title: {
             text: 'Win %'
         },
+        max: 0.8
     },
     legend: {
         enabled: false
@@ -692,6 +709,10 @@ let scatter1  = Highcharts.chart('scatter1', {
     },
     plotOptions: {
         scatter: {
+            // dataLabels: {
+            //     enabled: true,
+            //     pointFormat: '{series.name}'
+            // },
             lineWidth:5,
             marker: {
                 symbol: 'circle',
@@ -825,5 +846,67 @@ let scatter2  = Highcharts.chart('scatter2', {
     series: scatterData20
 });
 
+
+Highcharts.chart('line1', {
+
+    title: {
+        text: 'Solar Employment Growth by Sector, 2010-2016'
+    },
+
+    subtitle: {
+        text: 'Source: thesolarfoundation.com'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Number of Employees'
+        }
+    },
+
+    xAxis: {
+        accessibility: {
+            rangeDescription: 'Range: 2010 to 2017'
+        }
+    },
+
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2015
+        }
+    },
+
+    series: [{
+        name: 'Dodgers',
+        data: [43934, 52503, 57177, 69658, 97031, 119931]
+    }, {
+        name: 'Rays',
+        data: [24916, 24064, 29742, 29851, 32490, 30282]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
 
             

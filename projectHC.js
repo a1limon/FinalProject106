@@ -174,7 +174,7 @@ var colorCode =
             //orioles
             "Baltimore Orioles":"#DF4601"};
 
-console.log(colorCode["Tampa Bay Rays"]);
+// console.log(colorCode["Tampa Bay Rays"]);
 
 
 
@@ -330,7 +330,7 @@ years.forEach(function (year) {
         document.querySelectorAll('.buttons button.active').forEach(function (active) {
             active.className = '';
         });
-        btn.className = 'active';
+        btn.className= 'active';
 
         chart.update({
             title: {
@@ -662,14 +662,14 @@ let dat19 = [];
 for (let d = 0; d < scatterData19.length; d++){
     dat19.push(scatterData19[d].data[0]);
 }
-console.log(dat19);
+// console.log(dat19);
 scatterData19.push(fitData(dat19));
-console.log(scatterData19);
+// console.log(scatterData19);
 
-console.log(scatterData19.slice(0,30));
+// console.log(scatterData19.slice(0,30));
 
-console.log(scatterData19.slice(30,31));
-console.log(scatterData19.slice(0,30));
+// console.log(scatterData19.slice(30,31));
+// console.log(scatterData19.slice(0,30));
 
 let scatter1  = Highcharts.chart('scatter1', {
     chart: {
